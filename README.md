@@ -1,11 +1,11 @@
-# Creando una Red Social
+# El Trueke
 
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
+* [2. Definición del producto](#2-resumen-del-proyecto)
+* [3. Historias de usuario](#3-historias-de-usuario)
+
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Entrega](#7-entrega)
@@ -26,7 +26,19 @@ investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
 de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
 más comentado.
 
-## 2. Resumen del proyecto
+## 2. Definición del producto
+
+La red social EL TRUEKE es una página web dirigida a personas que quieren realizar intercambio de bienes materiales o enceres por otros productos según la necesidad de los usuarios. Esta práctica de intercambio existe desde el periodo neolítico aproximadamente  10.000 años atrás. 
+
+El objetivo de esta red social es facilitar al usuario la búsqueda de los mejores candidatos para realizar un intercambio, pautando una forma de entrega de sus productos sin intervención de dinero.
+
+Las ventajas de realizar intercambio es que las personas pueden reducir la cantidad de productos que tiene en desuso y obtener producto que realmente necesiten favoreciendo a su economía.
+
+* **¿Quiénes son los principales usuarios del producto?**
+Personas mayores de edad que tengan productos que puedan ser intercambiador por otros.
+
+* **¿Como crees que el producto que estas creando resuelve el problema del usuario?** 
+Debido a la situación actual en la que se encuentra la economía de nuestro país muchas de personas se han visto afectadas ya que han perdido su trabajo o disminuido su porcentaje de ingreso económico. Es por esto que nace El Trueque, una red social para aportar beneficios ya que no necesitaran de dinero para obtener productos que requieran, El usuario podrá realizar intercambio de producto que tenga en existencia por otro que necesite sin dar un golpe al su bolsillo.
 
 En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
 Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
@@ -37,128 +49,37 @@ o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco), de la
 Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
 acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
 
-## 3. Objetivos de aprendizaje
-
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
-
-### HTML y CSS
-
-* [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-
-### DOM y Web APIs
-
-* [ ] [Manipulación dinámica del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-* [ ] [History API](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-* [ ] [`localStorage`](https://lms.laboratoria.la/cohorts/scl-2020-03-bc-core-scl013/courses/browser/03-browser-apis/03-web-storage)
-
-### Javascript
-
-* [ ] [Uso de callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
-* [ ] [Consumo de Promesas](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] Uso ES modules
-([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-
-### Firebase
-
-* [ ] [Firestore](https://firebase.google.com/docs/firestore)
-* [ ] [Firebase Auth](https://firebase.google.com/docs/auth/web/start)
-* [ ] [Firebase security rules](https://firebase.google.com/docs/rules)
-* [ ] [Uso de onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen)
-| [onAuthStateChanged](https://firebase.google.com/docs/auth/web/start#set_an_authentication_state_observer_and_get_user_data)
-
-### Testing
-
-* [ ] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
-* [ ] [Testeo asíncrono](https://jestjs.io/docs/es-ES/asynchronous)
-* [ ] [Mocking](https://jestjs.io/docs/es-ES/manual-mocks)
-
-### Git y Github
-
-* [ ] Colaboración en Github
-* [ ] Organización en Github
-
-### Buenas prácticas de desarrollo
-
-* [ ] Modularización
-* [ ] Nomenclatura / Semántica
-* [ ] Linting
-
-***
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe trabajar en equipos de tres.
-
-* La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS :smiley:. Para este proyecto **no está permitido** utilizar
-  _frameworks_ o librerías de CSS y JS.
-
-* La división y organización del trabajo debe permitir, sin excepciones, que
-  **cada integrante** del equipo practique el aprendizaje de todo lo involucrado
-  en **cada historia**. _No se dividan el trabajo como en una fábrica._
-  - ¿Hasta acá has avanzado en tus proyectos con cierta fluidez y sin mayores
-    problemas? Sé generosa con tus compañeras, permíteles aprender y practicar
-    sin restricciones, aunque tome un poco más de tiempo. Aproveha de
-    _coachearlas_, de hacer _pair programming_, una de las mejores maneras de
-    aprender es explicando verbalmente.
-
-  - ¿Se te está haciendo difícil y te cuesta un poco más avanzar? No te quedes
-    con las partes "fáciles" del proyecto, conversa, negocia, exige tu oportunidad
-    para practicar y aprender lo que se te hace más difícil.
-
-* Solamente pueden trabajar en una única historia por vez, no pueden avanzar a
-  la siguiente sin haber completado la anterior. La historia se completa cuando
-  se cumplen **todos** sus Criterios de Aceptación + **toda** su Definición
-  de Terminado.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-### 5.1 Boilerplate
-
-Este proyecto no incluye un _boilerplate_, así es que tendrás que definir la
-estructura de carpetas y escribir tus propias Pruebas Unitarias (_tests_). Para
-hacerlo, puedes guiarte de los proyectos anteriores.
-
-### 5.2 Definición del producto
-
-En el `README.md` cuéntanos brevemente cómo descubriste las necesidades de los
-usuarios y cómo llegaste a la definición final de tu producto. Es importante
-que detalles:
-
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
-
-### 5.3 Historias de usuario
+### 3. Historias de usuario
 
 Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
 Usuario que representen todo lo que necesitan hacer/ver en la Red Social. Cada
 una de tus Historias de Usuario debe tener:
 
-* **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
-  necesidades del usuario.
+* **Historia 1:** Yo como usuario nuevo quiero registrarme con mi email y contraseña
+para obtener información acerca de los trueques.
+* **Criterios de Aceptación:** Dado que ingresé mis datos en el formulario, cuando carga 
+la interfaz, entonces quedo registrado en la red social.
+* **Definición de terminado:** El usuario queda registrado dentro de la base de datos
+de la red social.
 
-* **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-  para que, como equipo, sepan que esa historia está terminada y lista
-  para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-  incluir estos aspectos en su Definición de Terminado (más todo lo que
-  necesiten agregar):
+* **Historia 2:** Yo como usuario registrado quiero logearme con mi cuenta
+para acceder al contenido.
+* **Criterios de Aceptación:**Dado que ya soy usuario registrado, y mis credenciales
+son válidas, entonces mi cuenta ya ha sido activada y veo el contenido de la página.
+* **Definición de terminado:**El usuario registrado puede ver el contenido de la página.
 
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
-  - Testearon manualmente buscando errores e imperfecciones simples.
-  - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
-    usuarios como mejoras.
-  - Desplegaron su aplicación y etiquetaron la versión (git tag).
+* **Historia 3:** Yo como usuario registrado quiero publicar un post para
+intercambiar un producto.
+* **Criterios de Aceptación:**Dado que deseo publicar un producto para intercambiarlo,
+cuando le hago click al botón de publicar, entonces mi producto se publica en la página principal.
+* **Definición de terminado:**La publicación puede ser vista por todos los usuarios de la red social.
+
+* **Historia 4:** Yo como usuario registrado quiero eliminar un post para
+eliminar mi anuncio una vez intercambiado el producto.
+* **Criterios de Aceptación:**Dado que deseo eliminar la publicación de mi producto,
+cuando le hago click al botón de eliminar, entonces mi publicación se elimina de la página principal.
+* **Definición de terminado:**La publicación se elimina de la red social.
+
 
 ### 5.4 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
