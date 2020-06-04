@@ -1,5 +1,11 @@
-// Este es el punto de entrada de tu aplicacion
+import {menu} from './view/menu.js' 
+import {changeRoute} from './lib/router.js' 
 
-import { myFunction } from './lib/index.js';
-
-myFunction();
+const init = () => {
+    document.getElementById('root').innerHTML = menu()
+    
+    window.addEventListener ('hashchange', () => {
+        changeRoute(window.location.hash);
+    })
+};
+window.addEventListener('load',init)
