@@ -7,36 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
   <title>El Trueke</title>
-</head>
+</head> 
 
 <body>
-  <div id="content">
+  <div id="root"></div>
+<script type="module" src="main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
 
-    <!--HOME-->
-    <div id="home">
-      <div class="img-portada"></div>
-
-        <div id="boxsingIn">
-          <img src="../img/logo3.png">
-          <input class="login" id="txtEmail" type="email" name="user-email" placeholder="Direccion de correo">
-          <input class="login" id="txtPasswword" type="password" name="user-contraseña" placeholder="Contraseña">
-          <button class="login" id="btnSingIn" type="button" name="singIn">Iniciar Sesion</Button>
-          <article class="login" class="article"></article>
-          <input class="login" type="text" id="google" value="Iniciar sesion con Google">
-          <p>¿No tienes cuenta? <button>Registrate</button></p>
-        </div>
-    </div>
-
-    <!--REGISTRO-->
-    <div id="register">
-      REGISTRO
-    </div>
-  </div>
-
-
-
-
-  <script type="module" src="main.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB6PF4N0aAzpfXvVSq36sxn-Tus351zmDI",
+    authDomain: "el-trueke.firebaseapp.com",
+    databaseURL: "https://el-trueke.firebaseio.com",
+    projectId: "el-trueke",
+    storageBucket: "el-trueke.appspot.com",
+    messagingSenderId: "71095432017",
+    appId: "1:71095432017:web:673702cd565f52bb689970"
+  };
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
 </body>
-
 </html>
