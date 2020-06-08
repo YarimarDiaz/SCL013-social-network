@@ -14,7 +14,7 @@ export const home = () => {
           <button class="login" id="btnSingIn" type="button" name="singIn">Iniciar Sesion</Button>
           <article class="login" class="article"></article>
           <input class="login" type="text" id="google" value="Iniciar sesion con Google">
-          <p>¿No tienes cuenta? <button>Registrate</button></p>
+          <p>¿No tienes cuenta? <a href='#/singIn'><button>Registrate</button></a></p>
         </div>
         </div>
     </div>
