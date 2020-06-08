@@ -2,6 +2,7 @@ import {home} from '../view/home.js'
 import {menu} from '../view/menu.js'
 import {singIn} from '../view/singIn.js'
 import {profile} from '../view/profile.js'
+import {knowUs} from '../view/knowUs.js'
 
 
 export const changeRoute = (hash) => {
@@ -10,6 +11,8 @@ export const changeRoute = (hash) => {
     } else if (hash === '#/singIn'){
         return showPages(hash)
     }else if (hash === '#/profile'){
+        return showPages(hash)
+    }else if (hash === '#/knowUs'){
         return showPages(hash)
     } else  {
         return showPages(hash)
@@ -30,6 +33,10 @@ export const showPages = (hash) => {
         case '#/profile':
             containerRoot.appendChild(profile());
             break;
+            case '#/knowUs':
+                containerRoot.appendChild(knowUs());
+                break;
+    
         default:
             containerRoot.innerHTML = `<h2>No existe</h2>`
 
