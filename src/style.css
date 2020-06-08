@@ -69,3 +69,100 @@ color: #0022FF;
 font-weight: bold;
 font-size: 17px;
 }
+/*PROFILE */
+#section-father{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f6f6;
+}
+#section-father .profile{
+    
+    width: 32rem;
+    background-color:#f3f5f3;
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+    border: 1px solid;
+    
+}
+#section-father .profile-wrapper{
+    display:flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+#section-father .profile-image-container{
+    width: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#section-father .profile-image-container .profilePhoto{
+    
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid;
+}
+#section-father .profile-image-container h1{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 6;
+}
+#section-father .city{
+    color:#777;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#section-father .description{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+#section-father .btn{
+    padding: 1rem 2.5rem;
+    background-color: #445ae3;
+    border-radius: 2rem;
+    margin: 1px solid;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
+}
+#section-father .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0,0,0, .2);
+}
+#section-father .btn:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+#section-father .posts{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+#section-father .posts-container{
+    padding: 15px 10px;
+    width: 600px;
+    border: 2px solid #333;
+}
+#section-father .posts-container h2{
+    text-align: center;
+}
+#section-father textarea{
+    height: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    resize: none;
+    outline: none;
+} 

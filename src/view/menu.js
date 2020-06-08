@@ -3,6 +3,7 @@ export const menu = () => {
     <ul>
         <li><a href='#/'>Registro</a></li>
         <li><a href='#/singIn'>Sing In</a></li>
+        <li><a href='#/profile'>Profile</a></li>
     </ul>
   ` 
 
