@@ -22,7 +22,7 @@ body {
     width: 700px;
     height: 400px;
 }
-#home #boxsingIn{
+#boxsingIn{
     border-radius: 10px;
     width: 280px;
     height: 450px;
@@ -35,20 +35,20 @@ body {
     align-items: center;
     font-size: 17px;
 }
-#home #boxsingIn img {
+#boxsingIn img {
     width: 220px;
     height: 70px;
     float: left;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-#home .login {
+.login {
     width: 220px;
     height: 30px;
     margin-top:10px;
     font-size: 17px;
 }
-#home button.login {
+button.login {
     background-color: #82D7F6;
     border: 1px solid #0377FB;
     color: white;
@@ -59,11 +59,11 @@ article.login {
     margin-top: -3px;
     margin-bottom: 15px;
 }
-#home #google {
+#google {
     text-align: center;
     border: none;
 }
-#home button {
+button {
 border: none;
 color: #0022FF;
 font-weight: bold;
@@ -188,8 +188,6 @@ font-size: 17px;
 .caja-conocenos p {
    display: block;
    font-size: 18px;
-
-
 }
 
 .caja-conocenos h1 {
@@ -203,7 +201,7 @@ font-size: 17px;
         flex-direction: row;
     }
     
-    .caja-conocenos img {
+   .caja-conocenos img {
         width: 100%;
         height: auto;
     }

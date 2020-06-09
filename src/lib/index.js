@@ -14,3 +14,24 @@ export const login = () => {
   });
 }
 
+export const createUser = () => {
+  let name = document.getElementById('name').value
+  let lastname = document.getElementById('lastname').value
+  let email = document.getElementById('emailSingIn').value
+  let passwordSingIn = document.getElementById('passwordSingIn').value
+
+  firebase.auth().createUserWithEmailAndPassword(email,passwordSingIn)
+  .then(res=>{
+      alert("Se regsitro correctamente")
+      document.getElementById("btnSingIn").click();
+
+  }).catch(err=>{
+      alert("Ah ocurrido un error")
+  });
+
+
+
+
+
+
+}
