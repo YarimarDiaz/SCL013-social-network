@@ -2,8 +2,8 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Definición del producto](#2-resumen-del-proyecto)
+
+* [1. Definición del producto](#1-Definición del producto)
 * [3. Historias de usuario](#3-historias-de-usuario)
 
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -12,21 +12,11 @@
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
 ***
+![trueke-banner](/src/img/logo3.png)
 
-## 1. Preámbulo
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
-
-## 2. Definición del producto
+## 1. Definición del producto
 
 La red social EL TRUEKE es una página web dirigida a personas que quieren realizar intercambio de bienes materiales o enceres por otros productos según la necesidad de los usuarios. Esta práctica de intercambio existe desde el periodo neolítico aproximadamente  10.000 años atrás. 
 
