@@ -1,3 +1,6 @@
+
+import {createComment} from '../lib/index.js'
+
 export const profile =() =>{
     const divProfile=document.createElement('div');
     const viewProfile=`
@@ -19,9 +22,9 @@ export const profile =() =>{
         <div class="posts-container">
             <h2>Escribe tu post</h2>
             <form>
-                <textarea placeholder="Escribe aquí tu comentario"></textarea>
+                <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
                 <div class="button-post"></div>
-                <input type="button" class="btn" value="Postear">
+                <input type="button" class="btn" id="btn-comment" value="Postear">
                 
             </form>
         </div>
@@ -29,5 +32,10 @@ export const profile =() =>{
 </section>
 `
 divProfile.innerHTML = viewProfile;
+const btnComment = divProfile.querySelector('#btn-comment')
+btnComment.addEventListener('click', () => {
+   console.log("AQUIIIII");
+    createComment();
+})
 return divProfile;
 }
