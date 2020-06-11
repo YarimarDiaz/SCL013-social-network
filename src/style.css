@@ -69,6 +69,7 @@ color: #0022FF;
 font-weight: bold;
 font-size: 17px;
 }
+
 /*PROFILE */
 #section-father{
     display: flex;
@@ -206,4 +207,53 @@ font-size: 17px;
         height: auto;
     }
     
+  }
+
+/* Sing In*/
+
+#pageSingIn {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#formSingIn{
+    border-radius: 10px;
+    width: 280px;
+    height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #707070;
+    background-color: #f6f6f6;
+    align-items: center;
+    font-size: 17px;
+}
+#formSingIn img {
+    width: 220px;
+    height: 70px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.inputSingIn {
+    width: 220px;
+    height: 30px;
+    margin-top:10px;
+    font-size: 17px;
+}
+button.inputSingIn {
+    background-color: #82D7F6;
+    border: 1px solid #0377FB;
+    color: white;
+    font-weight: bold;
+}
+
+#pageSingIn .img-portada{
+    background-image: url("../img/Trueque-CriptoTendencia.jpg");
+      background-repeat: no-repeat;
+      width: 700px;
+      height: 400px;
   }
