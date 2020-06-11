@@ -1,9 +1,9 @@
-import {login, userLogin, accesoUserLogin} from '../lib/index.js'
+import { login, userLogin, accesoUserLogin } from '../lib/index.js';
 
-export const home = () => { 
-    const divHome = document.createElement('div');
+export const home = () => {
+  const divHome = document.createElement('div');
 
-    const viewHome =  `
+  const viewHome = `
    <div id="content">
     <div id="home">
       <div class="img-portada"></div>
@@ -19,20 +19,20 @@ export const home = () => {
         </div>
     </div>
 
-   `
-   divHome.innerHTML = viewHome;
-    const btnGoogle = divHome.querySelector('#google')
-    btnGoogle.addEventListener('click', () => {
-        login()
-    })
-    
-    const btnLogin = divHome.querySelector('#btnLogin');
-    btnLogin.addEventListener('click', () => {
-        let email = document.getElementById('txtEmail').value;
-        let pass = document.getElementById('txtPasswword').value;
-        userLogin (email, pass);
-        accesoUserLogin (email, pass);
-    });
+   `;
+  divHome.innerHTML = viewHome;
+  const btnGoogle = divHome.querySelector('#google');
+  btnGoogle.addEventListener('click', () => {
+    login();
+  });
 
-    return divHome
-}
+  const btnLogin = divHome.querySelector('#btnLogin');
+  btnLogin.addEventListener('click', () => {
+    const email = document.getElementById('txtEmail').value;
+    const pass = document.getElementById('txtPasswword').value;
+    userLogin(email, pass);
+    accesoUserLogin(email, pass);
+  });
+
+  return divHome;
+};

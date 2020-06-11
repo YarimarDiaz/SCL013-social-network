@@ -1,9 +1,8 @@
+import { createComment, signOut } from '../lib/index.js';
 
-import {createComment} from '../lib/index.js'
-
-export const profile =() =>{
-    const divProfile=document.createElement('div');
-    const viewProfile=`
+export const profile = () => {
+  const divProfile = document.createElement('div');
+  const viewProfile = `
     <section id="section-father">
     <section class="profile">
         <div class="container">
@@ -13,7 +12,7 @@ export const profile =() =>{
                     <h1>NOMBRE</h1>
                     <p class="city">Santiago</p>
                     <p class="description">Descripcion perfil</p>
-                    
+
                 </div>
             </div>
         </div>
@@ -25,17 +24,26 @@ export const profile =() =>{
                 <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
                 <div class="button-post"></div>
                 <input type="button" class="btn" id="btn-comment" value="Postear">
-                
             </form>
         </div>
     </section>
 </section>
-`
-divProfile.innerHTML = viewProfile;
-const btnComment = divProfile.querySelector('#btn-comment')
-btnComment.addEventListener('click', () => {
-   console.log("AQUIIIII");
+<section>
+  <button id="btn-SingOut">Cerrar Sesión</button>
+</section>
+
+`;
+
+  divProfile.innerHTML = viewProfile;
+  const btnComment = divProfile.querySelector('#btn-comment');
+  btnComment.addEventListener('click', () => {
+    // console.log('AQUIIIII');
     createComment();
-})
-return divProfile;
-}
+  });
+  const btnSingOut = divProfile.querySelector('#btn-SingOut');
+  btnSingOut.addEventListener('click', () => {
+    signOut();
+  });
+
+  return divProfile;
+};

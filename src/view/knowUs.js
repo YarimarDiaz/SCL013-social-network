@@ -1,6 +1,6 @@
 export const knowUs = () => {
-    const divknowUs = document.createElement('div');
-    const viewknowUs = `
+  const divknowUs = document.createElement('div');
+  const viewknowUs = `
     <div id="content">
       <div id="conocenos">
         <div id="mision"  class="caja-conocenos">
@@ -25,8 +25,7 @@ export const knowUs = () => {
 
       </div>
     </div>
-`
-divknowUs.innerHTML = viewknowUs;
-return divknowUs
-
-}
+`;
+  divknowUs.innerHTML = viewknowUs;
+  return divknowUs;
+};
