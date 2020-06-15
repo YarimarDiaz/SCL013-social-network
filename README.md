@@ -78,12 +78,17 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 
 
 
-### 5.5 Responsive
+### 4. Prototipo de alta fidelidad
 
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (_tablets_, celulares, etc.). Te
-sugerimos seguir la técnica de _`mobile first`_ (más detalles sobre esta técnica
-al final).
+***
+#### Vista de escritorio
+![Prototipoalta1](/src/img/readme/alta1.PNG)
+![Prototitpoalta2](/src/img/readme/alta2.PNG)
+
+#### Vista de celular
+#### Vista de tablet
+
+
 
 ### 5.6 Consideraciones del comportamiento de la interfaz de usuario (UI)
 
