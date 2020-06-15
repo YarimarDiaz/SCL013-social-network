@@ -257,3 +257,18 @@ button.inputSingIn {
       width: 700px;
       height: 400px;
   }
+
+/*---------Mensajes de Error----------*/
+#mensajes{
+    text-align: center;
+    color:purple;
+    font-weight: bold;
+
+}
+  
+#mensageSing{
+    text-align: center;
+    color:purple;
+    font-weight: bold;
+
+}
