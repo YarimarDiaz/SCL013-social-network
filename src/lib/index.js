@@ -4,9 +4,9 @@ export const login = () => {
   firebase.auth().signInWithPopup(provider)
     .then(() => {
       window.location.hash = '#/profile';
-      // var token = result.credential.accessToken;
-      // var user = result.user;
-      // console.log('user', user);
+      // const token = result.credential.accessToken;
+      const user = result.user;
+      console.log('user', user);
     }).catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -14,6 +14,11 @@ export const login = () => {
       var credential = error.credential;
     // console.log('errorMessage',errorMessage);
     });
+};
+
+// Mostrar nombre de usuario registrado en google
+export const dataUser = () => {
+  return firebase.auth().currentUser;
 };
 
 // Configuración de nuevo usuario
@@ -25,16 +30,18 @@ export const createUser = () => {
 
   firebase.auth().createUserWithEmailAndPassword(email, passwordSingIn)
     .then(() => {
+      const mensageSing = document.querySelector('#mensageSing')
+      mensageSing.innerHTML = '';
       window.location.hash = '#/profile';
     // alert ("Se registro Correctamente")
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
-        alert('Su email es invalido');
-      } else if (errorCode === 'auth/weak-password') {
-        alert('La contraseña debe tener 6 caracteres');
-      } else if (errorCode === 'auth/email-already-in-use') {
-        alert('La cuenta ya esta registrada');
+        mensageSing.innerHTML = 'Su email es invalido';
+      } if (errorCode === 'auth/weak-password') {
+        mensageSing.innerHTML = 'La contraseña debe tener 6 caracteres';
+      } if (errorCode === 'auth/email-already-in-use') {
+        mensageSing.innerHTML = 'La cuenta ya esta registrada';
       }
     });
 };
@@ -85,6 +92,8 @@ export const createComment = () => {
 export const userLogin = (email, pass) => {
   firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(() => {
+      const mensajes = document.querySelector('#mensajes');
+      mensajes.innerHTML = '';
       window.location.hash = '#/profile';
     })
     .catch((error) => {
@@ -92,12 +101,12 @@ export const userLogin = (email, pass) => {
       const errorCode = error.code;
       // let errorMessage = error.message;
       if (errorCode === 'auth/invalid-email') {
-        alert('Su email es invalido');
-      } else if (errorCode === 'auth/user-not-found') {
-        alert('Usuario no esta registrado');
-      } else if (errorCode === 'auth/wrong-password') {
-        alert('La contraseña es invalida');
-      } else alert('Ocurrio un error');
+        mensajes.innerHTML = 'Su email es invalido';
+      } if (errorCode === 'auth/user-not-found') {
+        mensajes.innerHTML = 'Usuario no esta registrado';
+      } if (errorCode === 'auth/wrong-password') {
+        mensajes.innerHTML = 'La contraseña es invalida';
+      }
     });
 };
 
