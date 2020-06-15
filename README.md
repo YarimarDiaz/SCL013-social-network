@@ -73,9 +73,8 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 
 ### 5.4 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu aplicación
-y, con eso, diseña la Interfaz de Usuario (UI por sus siglas en inglés) que
-siga este flujo.
+***
+![Prototipo1](/src/img/readme/home1.png)
 
 ### 5.5 Responsive
 
