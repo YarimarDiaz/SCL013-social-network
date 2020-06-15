@@ -6,7 +6,7 @@
 * [1. Definicion del producto](#1-Definicion-del-producto)
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)](#5-Diseño-de-la-interfaz-de-usuario)
-* [6. Hacker edition](#6-hacker-edition)
+* [4. Prototipo de alta fidelidad](#4-Prototipo-de-alta-fidelidad)
 * [7. Entrega](#7-entrega)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
@@ -84,9 +84,24 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 #### Vista de escritorio
 ![Prototipoalta1](/src/img/readme/alta1.PNG)
 ![Prototitpoalta2](/src/img/readme/alta2.PNG)
+![Prototitpoalta3](/src/img/readme/alta3.PNG)
+![Prototitpoalta4](/src/img/readme/alta4.PNG)
+![Prototitpoalta5](/src/img/readme/alta5.PNG)
+
 
 #### Vista de celular
+![Prototitpoaltacel1](/src/img/readme/altacel1.PNG)
+![Prototitpoaltacel2](/src/img/readme/altacel2.PNG)
+![Prototitpoaltacel3](/src/img/readme/altacel3.PNG)
+![Prototitpoaltacel4](/src/img/readme/altacel4.PNG)
+![Prototitpoaltacel5](/src/img/readme/altacel5.PNG)
+
+
+
 #### Vista de tablet
+![Prototitpoaltaceltablet1](/src/img/readme/altatablet1.PNG)
+![Prototitpoaltaceltablet2](/src/img/readme/altatablet2.PNG)
+
 
 
 
