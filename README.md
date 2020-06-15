@@ -69,11 +69,11 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 ***
 ![Prototipo1](/src/img/readme/home1.png)
 ![Prototipo2](/src/img/readme/home2.png)
-![Prototipo1](/src/img/readme/home3.png)
-![Prototipo1](/src/img/readme/home4.png)
-![Prototipo1](/src/img/readme/home5.png)
-![Prototipo1](/src/img/readme/home6.png)
-![Prototipo1](/src/img/readme/home7.png)
+![Prototipo3](/src/img/readme/home3.png)
+![Prototipo4](/src/img/readme/home4.png)
+![Prototipo5](/src/img/readme/home5.png)
+![Prototipo6](/src/img/readme/home6.png)
+![Prototipo7](/src/img/readme/home7.png)
 
 
 
