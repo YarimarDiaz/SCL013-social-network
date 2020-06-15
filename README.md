@@ -68,6 +68,7 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 
 ***
 ![Prototipo1](/src/img/readme/home1.png)
+***
 ![Prototipo1](/src/img/readme/home2.png)
 ![Prototipo1](/src/img/readme/home3.png)
 ![Prototipo1](/src/img/readme/home4.png)
