@@ -3,10 +3,9 @@
 ## Índice
 
 
-* [1. Definición del producto](#1-Definición del producto)
-* [3. Historias de usuario](#3-historias-de-usuario)
-
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+* [1. Definicion del producto](#1-Definicion-del-producto)
+* [2. Historias de usuario](#2-historias-de-usuario)
+* [3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)](#5-Diseño-de-la-interfaz-de-usuario)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Entrega](#7-entrega)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
@@ -28,18 +27,12 @@ Las ventajas de realizar intercambio es que las personas pueden reducir la canti
 Personas mayores de edad que tengan productos que puedan ser intercambiador por otros.
 
 * **¿Como crees que el producto que estas creando resuelve el problema del usuario?** 
-Debido a la situación actual en la que se encuentra la economía de nuestro país muchas de personas se han visto afectadas ya que han perdido su trabajo o disminuido su porcentaje de ingreso económico. Es por esto que nace El Trueque, una red social para aportar beneficios ya que no necesitaran de dinero para obtener productos que requieran, El usuario podrá realizar intercambio de producto que tenga en existencia por otro que necesite sin dar un golpe al su bolsillo.
+Debido a la situación actual en la que se encuentra la economía de nuestro país muchas de personas se han visto afectadas ya que han perdido su trabajo o disminuido su porcentaje de ingresos económico. Es por esto que nace "El Trueke", una red social para aportar beneficios ya que no necesitaran de dinero para obtener productos que requieran, El usuario podrá realizar intercambio de productos que tenga en existencia por otro que necesite sin dar un golpe a su bolsillo.
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [Empanadas](https://es.wikipedia.org/wiki/Empanada)
-o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco), de la
-[Feijoada](https://es.wikipedia.org/wiki/Feijoada), o de lo que sea.
-
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
+Esta Red Social permitirá a cualquier usuario crear una cuenta de
 acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
 
-### 3. Historias de usuario
+### 2. Historias de usuario
 
 Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
 Usuario que representen todo lo que necesitan hacer/ver en la Red Social. Cada
@@ -71,10 +64,19 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 * **Definición de terminado:**La publicación se elimina de la red social.
 
 
-### 5.4 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
+### 3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
 ***
 ![Prototipo1](/src/img/readme/home1.png)
+![Prototipo1](/src/img/readme/home2.png)
+![Prototipo1](/src/img/readme/home3.png)
+![Prototipo1](/src/img/readme/home4.png)
+![Prototipo1](/src/img/readme/home5.png)
+![Prototipo1](/src/img/readme/home6.png)
+![Prototipo1](/src/img/readme/home7.png)
+
+
+
 
 ### 5.5 Responsive
 
