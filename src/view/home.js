@@ -8,12 +8,12 @@ export const home = () => {
     <div id="home">
       <div class="img-portada"></div>
         <div id="boxsingIn">
-          <img src="../img/logo3.png">
+        <img class="logo" src="../img/logo3.png">
           <input class="login" id="txtEmail" type="email" name="user-email" placeholder="Direccion de correo">
           <input class="login" id="txtPasswword" type="password" name="user-contraseña" placeholder="Contraseña">
           <button class="login" id="btnLogin" type="button" name="singIn">Iniciar Sesion</Button>
           <h3 id="mensajes"></h3>
-          <input class="login" type="text" id="google" value="Iniciar sesion con Google">
+          <a class="linkgoogle" href="#" id="btnGoogle"> <img class= "icon" src="./img/google.png">Iniciar sesion con Google</a>
           <p>¿No tienes cuenta? <a href='#/singIn'><button>Registrate</button></a></p>
         </div>
         </div>
@@ -21,7 +21,7 @@ export const home = () => {
 
    `;
   divHome.innerHTML = viewHome;
-  const btnGoogle = divHome.querySelector('#google');
+  const btnGoogle = divHome.querySelector('#btnGoogle');
   btnGoogle.addEventListener('click', () => {
     login();
   });

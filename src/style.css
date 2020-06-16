@@ -35,7 +35,7 @@ body {
     align-items: center;
     font-size: 17px;
 }
-#boxsingIn img {
+.logo {
     width: 220px;
     height: 70px;
     float: left;
@@ -59,10 +59,24 @@ article.login {
     margin-top: -3px;
     margin-bottom: 15px;
 }
-#google {
+
+#btnGoogle {
     text-align: center;
     border: none;
+    font-weight: bold;
 }
+
+.linkgoogle {
+    text-decoration: none;
+    color: black;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px
+}
+
 button {
 border: none;
 color: #0022FF;
