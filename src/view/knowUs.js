@@ -3,6 +3,14 @@ export const knowUs = () => {
   const viewknowUs = `
     <div id="content">
       <div id="conocenos">
+        <div class="divBaner">
+          <div>
+            <img src="./img/logo3.png" class="baner">
+          </div>
+          <div>
+            <button id="btn-SingOut">Cerrar Sesión</button>
+          </div>
+        </div>
         <div id="mision"  class="caja-conocenos">
           <img src="img/En-que-consiste-el-trueque-2.png">
           <h1>Misión</h1>

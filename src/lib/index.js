@@ -50,26 +50,107 @@ export const createUser = () => {
 // Configuración de base de datos "Creando Post"
 export const createComment = () => {
   // Funcion para guardar los comentarios
-
   const comment = document.getElementById('txtcomment').value;
-
   console.log('llama la funcion');
   // Agregar comentarios
   firebase.firestore().collection('comentarios').add({
     usuario: 'usuario',
     comment: comment,
+    fecha: new Date(),
     likes: 1,
   })
     .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-      document.getElementById('txtcomment').value = '';
+      document.getElementById('txtcomment').value = ''; 
+      // console.log('Document written with ID: ', docRef.id);
+      postComments()
     })
     .catch((error) => {
       console.error('Error adding document: ', error);
     });
 };
 
-/* // export const createComment = () => {
+// leer datos desde base correcta
+export const postComments = () => {
+  const publicar = document.querySelector('#post');
+  firebase.firestore().collection("comentarios").orderBy('fecha', 'desc')
+  .onSnapshot((querySnapshot) => {
+    publicar.innerHTML= '';
+    querySnapshot.forEach((doc) => {
+    publicar.innerHTML += `
+    <p>${doc.data().comment}</p>
+    <button id="btnEliminar">eliminar</button></td>
+    <button id="btnEditar">editar</button></td>
+`;
+  });
+});
+}
+
+
+
+
+
+
+
+/* 
+12:07
+// Guardar informacion correcta
+export const guardarInformacionDeComentario = () => {
+  const comment = document.querySelector('#table').value;
+  firebase.firestore().collection("comentarios").add({
+    comment: comment,
+    fecha: new Date()
+  })
+    .then(function (docRef) {
+      document.querySelector('#table').value = ''
+      publicarcomentario()
+    //console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+    console.error("Error adding document: ", error);
+    });
+}
+// leer datos desde base correcta
+export const publicarcomentario = () => {
+  const publicar = document.querySelector('#publicacion');
+  firebase.firestore().collection("comentarios").orderBy('fecha', 'desc')
+  .onSnapshot((querySnapshot) => {
+    publicar.innerHTML= '';
+    querySnapshot.forEach((doc) => {
+    publicar.innerHTML += `
+    <p>${doc.data(id).comment}</p>
+    <button id="btnEliminar" onclick ="borrarDatos('${doc.id}')">eliminar</button></td>
+    <button class="btn btn-danger">editar</button></td>
+`;
+  });
+});
+}
+// borrar datos de cloud firestore
+export const borrarDatos = (id) => {
+  firebase.firestore().collection("comentarios").doc(id).delete()
+  .then(function() {
+    console.log("Document successfully deleted!");
+}).catch(function(error) {
+    console.error("Error removing document: ", error);
+});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const createComment = () => {
   let comment=document.getElementById('txtcomment').value;
 
   console.log("llama la funcion");
