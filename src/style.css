@@ -73,29 +73,27 @@ font-size: 17px;
 /*PROFILE */
 #section-father{
     display: flex;
-    flex-wrap: wrap;
-    background-color: #f5f6f6;
+    flex-direction: column;
+background-color: indigo;
+    /*background-color: #f5f6f6;*/
 }
 #section-father .profile{
-    
-    width: 32rem;
-    background-color:#f3f5f3;
+    display: flex;
+justify-content: center;    
+background-color:#f3f5f3;
     box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
     border: 1px solid;
     
 }
-#section-father .profile-wrapper{
-    display:flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-}
+
+
 #section-father .profile-image-container{
-    width: 30px;
+    
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     justify-content: center;
     
 }
@@ -126,8 +124,8 @@ font-size: 17px;
 }
 #section-father .btn{
     padding: 1rem 2.5rem;
-    background-color: #445ae3;
-    border-radius: 2rem;
+    background-color: #ffad33;
+    
     margin: 1px solid;
     text-transform: uppercase;
     color: #eee;
@@ -143,31 +141,47 @@ font-size: 17px;
     box-shadow: none;
 }
 #section-father .posts{
-    
+    padding-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    /*background-color: #dee1e3;*/
+    background-color: red;
+   
 }
 #section-father .posts-container{
     padding: 15px 10px;
     width: 600px;
+    
+    background-color: lightblue;
     border: 2px solid #333;
 }
 #section-father .posts-container h2{
     text-align: center;
 }
 #section-father textarea{
-    height: 20px;
+    height: 40px;
     width: 100%;
     border: none;
     border-bottom: 2px solid #aaa;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    
     margin-bottom: 10px;
     resize: none;
     outline: none;
 } 
-
+#section-father .commentsContainer{
+    background-color: green;
+    border-style: solid;
+   margin: 60px;
+    width: 700px;
+}
+.commentsContainer h2{
+    font-size: 36px;
+    color: #283035;
+    font-weight: 400;
+}
 /*---------CONOCENOS----------*/
 #conocenos {
     display: flex;
