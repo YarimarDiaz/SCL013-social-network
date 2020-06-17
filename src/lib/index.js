@@ -89,7 +89,7 @@ export const createComment = () => {
   // Funcion para guardar los comentarios
   const comment = document.getElementById('txtcomment').value;
   const user = dataUser();
-  console.log('llama la funcion');
+  //console.log('llama la funcion');
   // Agregar comentarios
   firebase.firestore().collection('comentarios').add({
     usuario: user.displayName,
@@ -116,12 +116,42 @@ export const postComments = () => {
     querySnapshot.forEach((doc) => {
     publicar.innerHTML += `
     <p>${doc.data().comment}</p>
-    <button id="btnEliminar">eliminar</button></td>
-    <button id="btnEditar">editar</button></td>
+    <button name="btnDeletePost" data-id="${doc.id}">eliminar</button></td>
+    <button name="btnEditar">editar</button></td>
 `;
   });
+  const btnDelete = document.getElementsByName('btnDeletePost')
+    for (let i= 0; i < btnDelete.length; i++){
+      btnDelete[i].addEventListener('click', deleteData)
+  }
 });
 }
+
+
+// borrar datos de cloud firestore
+export const deleteData = (event) => {
+  console.log("event.target.dataset", event.target.dataset);
+  firebase.firestore().collection("comentarios").doc(event.target.dataset.id).delete()
+  .then(() => {
+    console.log("Document successfully deleted!");
+}).then(() => {
+    console.error("Error removing document: ", error);
+});
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // cerrar Sesion.
