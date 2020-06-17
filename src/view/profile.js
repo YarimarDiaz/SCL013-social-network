@@ -32,8 +32,8 @@ export const profile = () => {
             <form>
                 <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
                 <input type="button" class="btn" id="btn-comment" value="Postear">
-                <div id="post"></div> 
             </form>
+              <div id="post"></div> 
         </div>
     </section>
 </section>
@@ -55,3 +55,4 @@ export const profile = () => {
 
   return divProfile;
 };
+
