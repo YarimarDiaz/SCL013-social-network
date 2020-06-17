@@ -77,7 +77,7 @@ article.login {
     margin-right: 5px
 }
 
-button {
+#home button {
 border: none;
 color: #0022FF;
 font-weight: bold;
@@ -196,6 +196,25 @@ background-color:#f3f5f3;
     color: #283035;
     font-weight: 400;
 }
+
+
+.divBaner{
+    display: flex;
+    background: #1D1E20;
+    justify-content: space-between;
+}
+    .baner{
+    width: 200px;
+    height: 80px;
+    }
+
+    #btn-SingOut{
+        align-items: end;
+        margin-top: 70px;
+    
+    }
+
+
 /*---------CONOCENOS----------*/
 #conocenos {
     display: flex;
