@@ -38,9 +38,6 @@ export const profile = () => {
     </section>
 </section>
 
-
-
-
 `;
 
   divProfile.innerHTML = viewProfile;
