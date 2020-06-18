@@ -197,6 +197,12 @@ background-color:#f3f5f3;
     font-weight: 400;
 }
 
+#btnLike, #btnDelete {
+    width: 15px;
+    height: 15px;
+}
+
+
 
 .divBaner{
     display: flex;

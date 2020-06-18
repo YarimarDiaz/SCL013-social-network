@@ -108,35 +108,54 @@ export const createComment = () => {
 };
 
 // leer datos desde base correcta
-export const postComments = () => {
-  const publicar = document.querySelector('#post');
+export const postComments = (divProfile) => {
+  const publicar = divProfile.querySelector('#post');
   firebase.firestore().collection("comentarios").orderBy('fecha', 'desc')
-  .onSnapshot((querySnapshot) => {
-    publicar.innerHTML= '';
-    querySnapshot.forEach((doc) => {
-    publicar.innerHTML += `
-    <p>${doc.data().comment}</p>
-    <button name="btnDeletePost" data-id="${doc.id}">eliminar</button></td>
-    <button name="btnEditar">editar</button></td>
-`;
-  });
-  const btnDelete = document.getElementsByName('btnDeletePost')
-    for (let i= 0; i < btnDelete.length; i++){
-      btnDelete[i].addEventListener('click', deleteData)
-  }
-});
+    .onSnapshot((querySnapshot) => {
+      publicar.innerHTML = '';
+      querySnapshot.forEach((doc) => {
+        let span = document.createElement("span")
+        span.innerHTML = `
+          <p>${doc.data().comment}</p>
+          <button id="btnsum"><img id="btnLike" src="./img/like.png"><span id="icon_${doc.id}">${doc.data().likes}</span></button>
+          <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button></td>
+          <button name="btnEditar">editar</button></td>
+            `;
+
+        let btnlike = span.querySelector('#btnsum');
+        btnlike.addEventListener('click', () => {
+          sumLike(doc.id, doc.data().likes)
+        });
+
+        let btnDelete = span.querySelector('#btnDeletePost')
+
+        btnDelete.addEventListener('click', () => {
+           deleteData(doc.id)
+          })
+
+        publicar.appendChild(span)
+
+      }
+      );
+
+    });
 }
 
+export const sumLike = (idComment, likes) => {
+  firebase.firestore().collection("comentarios").doc(idComment).update({
+    likes: likes + 1
+  });
+  document.getElementById('icon_' + idComment).innerHTML = likes + 1;
+}
 
 // borrar datos de cloud firestore
-export const deleteData = (event) => {
-  console.log("event.target.dataset", event.target.dataset);
-  firebase.firestore().collection("comentarios").doc(event.target.dataset.id).delete()
-  .then(() => {
-    console.log("Document successfully deleted!");
-}).then(() => {
-    console.error("Error removing document: ", error);
-});
+export const deleteData = (id) => {
+  firebase.firestore().collection("comentarios").doc(id).delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+    }).then(() => {
+      console.error("Error removing document: ", error);
+    });
 
 }
 
