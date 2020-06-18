@@ -1,4 +1,6 @@
-import { createComment, signOut, dataUser, postComments } from '../lib/index.js';
+import {
+  createComment, signOut, dataUser, postComments,
+} from '../lib/index.js';
 
 export const profile = () => {
   const divProfile = document.createElement('div');

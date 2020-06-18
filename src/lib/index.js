@@ -1,3 +1,11 @@
+/* eslint-disable no-console */
+/* eslint-disable no-use-before-define */
+/* eslint-disable object-shorthand */
+/* eslint-disable no-shadow */
+/* eslint-disable vars-on-top */
+/* eslint-disable no-var */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // Configuración de google
 export const login = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -6,20 +14,18 @@ export const login = () => {
       window.location.hash = '#/profile';
       // const token = result.credential.accessToken;
       const user = result.user;
-      console.log('user', user);
     }).catch((error) => {
+      // eslint-disable-next-line no-var
       var errorCode = error.code;
       var errorMessage = error.message;
       var email = error.email;
       var credential = error.credential;
-    // console.log('errorMessage',errorMessage);
+      // console.log('errorMessage',errorMessage);
     });
 };
 
 // Mostrar nombre de usuario registrado en google
-export const dataUser = () => {
-  return firebase.auth().currentUser;
-};
+export const dataUser = () => firebase.auth().currentUser;
 
 // Configuración de nuevo usuario
 export const createUser = () => {
@@ -30,10 +36,10 @@ export const createUser = () => {
 
   firebase.auth().createUserWithEmailAndPassword(email, passwordSingIn)
     .then(() => {
-      const mensageSing = document.querySelector('#mensageSing')
+      const mensageSing = document.querySelector('#mensageSing');
       mensageSing.innerHTML = '';
       window.location.hash = '#/profile';
-    // alert ("Se registro Correctamente")
+      // alert ("Se registro Correctamente")
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
@@ -89,7 +95,7 @@ export const createComment = () => {
   // Funcion para guardar los comentarios
   const comment = document.getElementById('txtcomment').value;
   const user = dataUser();
-  //console.log('llama la funcion');
+  // console.log('llama la funcion');
   // Agregar comentarios
   firebase.firestore().collection('comentarios').add({
     usuario: user.displayName,
@@ -98,9 +104,9 @@ export const createComment = () => {
     likes: 0,
   })
     .then((docRef) => {
-      document.getElementById('txtcomment').value = ''; 
+      document.getElementById('txtcomment').value = '';
       // console.log('Document written with ID: ', docRef.id);
-      postComments()
+      postComments();
     })
     .catch((error) => {
       console.error('Error adding document: ', error);
@@ -110,11 +116,11 @@ export const createComment = () => {
 // leer datos desde base correcta
 export const postComments = (divProfile) => {
   const publicar = divProfile.querySelector('#post');
-  firebase.firestore().collection("comentarios").orderBy('fecha', 'desc')
+  firebase.firestore().collection('comentarios').orderBy('fecha', 'desc')
     .onSnapshot((querySnapshot) => {
       publicar.innerHTML = '';
       querySnapshot.forEach((doc) => {
-        let span = document.createElement("span")
+        const span = document.createElement('span');
         span.innerHTML = `
           <p>${doc.data().comment}</p>
           <button id="btnsum"><img id="btnLike" src="./img/like.png"><span id="icon_${doc.id}">${doc.data().likes}</span></button>
@@ -122,56 +128,38 @@ export const postComments = (divProfile) => {
           <button name="btnEditar">editar</button></td>
             `;
 
-        let btnlike = span.querySelector('#btnsum');
+        const btnlike = span.querySelector('#btnsum');
         btnlike.addEventListener('click', () => {
-          sumLike(doc.id, doc.data().likes)
+          sumLike(doc.id, doc.data().likes);
         });
 
-        let btnDelete = span.querySelector('#btnDeletePost')
+        const btnDelete = span.querySelector('#btnDeletePost');
 
         btnDelete.addEventListener('click', () => {
-           deleteData(doc.id)
-          })
-
-        publicar.appendChild(span)
-
-      }
-      );
-
+          deleteData(doc.id);
+        });
+        publicar.appendChild(span);
+      });
     });
-}
+};
 
 export const sumLike = (idComment, likes) => {
-  firebase.firestore().collection("comentarios").doc(idComment).update({
-    likes: likes + 1
+  firebase.firestore().collection('comentarios').doc(idComment).update({
+    likes: likes + 1,
   });
-  document.getElementById('icon_' + idComment).innerHTML = likes + 1;
-}
+  document.getElementById(`icon_${idComment}`).innerHTML = likes + 1;
+};
 
 // borrar datos de cloud firestore
 export const deleteData = (id) => {
-  firebase.firestore().collection("comentarios").doc(id).delete()
+  firebase.firestore().collection('comentarios').doc(id).delete()
     .then(() => {
-      console.log("Document successfully deleted!");
-    }).then(() => {
-      console.error("Error removing document: ", error);
+      console.log('Document successfully deleted!');
+    })
+    .then(() => {
+      console.error('Error removing document: ', error);
     });
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 // cerrar Sesion.
 export const signOut = () => {
@@ -179,7 +167,7 @@ export const signOut = () => {
     .then(() => {
       window.location.hash = '#/';
       // console.log ('correoLogin');
-    // Sign-out successful.
+      // Sign-out successful.
     }).catch(() => {
       // An error happened.
     });
