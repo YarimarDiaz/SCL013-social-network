@@ -45,7 +45,6 @@ export const profile = () => {
   btnComment.addEventListener('click', () => {
     // console.log('AQUIIIII');
     createComment();
-
   });
   const btnSingOut = divProfile.querySelector('#btn-SingOut');
   btnSingOut.addEventListener('click', () => {
@@ -55,4 +54,3 @@ export const profile = () => {
   postComments(divProfile);
   return divProfile;
 };
-
