@@ -31,11 +31,13 @@ export const profile = () => {
     <section class="posts">
         <div class="posts-container">
             <h2>Escribe tu post</h2>
-            <form>
+            <div>
                 <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
                 <input type="button" class="btn" id="btn-comment" value="Postear">
-            </form>
-              <div id="post"></div> 
+            </div>
+              
+              <button id="btnEditComment">Postear Edición</button>
+              <div id="post"></div>
         </div>
     </section>
 </section>
@@ -45,7 +47,6 @@ export const profile = () => {
   divProfile.innerHTML = viewProfile;
   const btnComment = divProfile.querySelector('#btn-comment');
   btnComment.addEventListener('click', () => {
-    // console.log('AQUIIIII');
     createComment();
   });
   const btnSingOut = divProfile.querySelector('#btn-SingOut');

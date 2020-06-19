@@ -124,8 +124,8 @@ export const postComments = (divProfile) => {
         span.innerHTML = `
           <p>${doc.data().comment}</p>
           <button id="btnsum"><img id="btnLike" src="./img/like.png"><span id="icon_${doc.id}">${doc.data().likes}</span></button>
-          <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button></td>
-          <button name="btnEditar">editar</button></td>
+          <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button>
+          <button id="btnEditarPost" data-id="${doc.id}" data-comment="${doc.data().comment}">Editar</button>
             `;
 
         const btnlike = span.querySelector('#btnsum');
@@ -134,10 +134,19 @@ export const postComments = (divProfile) => {
         });
 
         const btnDelete = span.querySelector('#btnDeletePost');
-
         btnDelete.addEventListener('click', () => {
+          const confirmar = confirm('¿Desea eliminar el Post?');
+          if (confirmar === true);
           deleteData(doc.id);
         });
+
+        const btnEdit = span.querySelector('#btnEditarPost');
+        btnEdit.addEventListener('click', () => {
+          const confirmarEdi = confirm('¿Desea editar el Post?');
+          if (confirmarEdi === true);
+          editComment(event);      
+        });
+     
         publicar.appendChild(span);
       });
     });
@@ -156,10 +165,29 @@ export const deleteData = (id) => {
     .then(() => {
       console.log('Document successfully deleted!');
     })
-    .then(() => {
+    .catch(() => {
       console.error('Error removing document: ', error);
     });
 };
+
+// Editar Comentario
+export const editComment = (event) => {
+  document.querySelector('#txtcomment').value = event.target.dataset.comment
+  const btnEditComment = document.querySelector('#btnEditComment');
+  btnEditComment.addEventListener ('click', () => {
+    const editFirebase = firebase.firestore().collection("comentarios").doc(event.target.dataset.id);
+    const postEdit = document.querySelector('#txtcomment').value
+  return editFirebase.update({
+      comment: postEdit
+  })
+  .then(function() {
+    document.getElementById('txtcomment').value = '';
+  })
+  .catch(() => {
+  });
+  }
+  )};
+
 
 // cerrar Sesion.
 export const signOut = () => {
