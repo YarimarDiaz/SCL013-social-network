@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { home } from '../view/home.js';
 import { singIn } from '../view/singIn.js';
 import { profile } from '../view/profile.js';

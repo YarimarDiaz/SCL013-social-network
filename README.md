@@ -56,11 +56,18 @@ intercambiar un producto.
 cuando le hago click al botón de publicar, entonces mi producto se publica en la página principal.
 * **Definición de terminado:**La publicación puede ser vista por todos los usuarios de la red social.
 
-* **Historia 4:** Yo como usuario registrado quiero eliminar un post para
-eliminar mi anuncio una vez intercambiado el producto.
+* **Historia 4:** Yo como usuario registrado quiero eliminar mi post una vez intercambiado el producto.
 * **Criterios de Aceptación:**Dado que deseo eliminar la publicación de mi producto,
 cuando le hago click al botón de eliminar, entonces mi publicación se elimina de la página principal.
 * **Definición de terminado:**La publicación se elimina de la red social.
+
+* **Historia 5:** Yo como usuario del app quiero editar mi publicación.
+* **Criterios de Aceptación:** Dado que deseo editar la publicación de mi producto, cuando le hago click al botón de editar, entonces mi publicación puede ser editada, cuando haga click en el botón publicar edición, mi publicación sera nuevamente publicada.
+* **Definición de terminado:** La publicación fue editada y mostrada en le muro de publicaciones.
+
+* **Historia 6:** Yo como usuario del app quiero dar like a una publicación que me guste.
+* **Criterios de Aceptación:** Dado que el usuario da like a una publicación, entonces el like se suma a los like de la publicación elegida.
+* **Definición de terminado:** El like se suma a los like que tiene la publicación.
 
 
 ### 3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)

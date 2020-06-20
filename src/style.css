@@ -89,7 +89,6 @@ font-size: 17px;
     display: flex;
     flex-direction: column;
 background-color: indigo;
-    /*background-color: #f5f6f6;*/
 }
 #section-father .profile{
     display: flex;
@@ -160,7 +159,6 @@ background-color:#f3f5f3;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*background-color: #dee1e3;*/
     background-color: red;
    
 }
@@ -171,16 +169,14 @@ background-color:#f3f5f3;
     background-color: lightblue;
     border: 2px solid #333;
 }
-#section-father .posts-container h2{
+#section-father .posts-container, #h2{
     text-align: center;
 }
 #section-father textarea{
     height: 40px;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #aaa;
-    /*background-color: transparent;*/
-    
+    border-bottom: 2px solid #aaa; 
     margin-bottom: 10px;
     resize: none;
     outline: none;
@@ -244,7 +240,7 @@ background-color:#f3f5f3;
    font-size: 18px;
 }
 
-.caja-conocenos h1 {
+.caja-conocenos, #h1 {
     font-family: 'Luckiest Guy', cursive;
     color: black
  }
