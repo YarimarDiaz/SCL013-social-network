@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-shorthand */
@@ -7,6 +9,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // Configuración de google
+// eslint-disable-next-line no-alert
 export const login = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)
@@ -144,9 +147,8 @@ export const postComments = (divProfile) => {
         btnEdit.addEventListener('click', () => {
           const confirmarEdi = confirm('¿Desea editar el Post?');
           if (confirmarEdi === true);
-          editComment(event);      
+          editComment(event);
         });
-     
         publicar.appendChild(span);
       });
     });
@@ -172,21 +174,21 @@ export const deleteData = (id) => {
 
 // Editar Comentario
 export const editComment = (event) => {
-  document.querySelector('#txtcomment').value = event.target.dataset.comment
+  document.querySelector('#txtcomment').value = event.target.dataset.comment;
   const btnEditComment = document.querySelector('#btnEditComment');
-  btnEditComment.addEventListener ('click', () => {
-    const editFirebase = firebase.firestore().collection("comentarios").doc(event.target.dataset.id);
-    const postEdit = document.querySelector('#txtcomment').value
-  return editFirebase.update({
-      comment: postEdit
-  })
-  .then(function() {
-    document.getElementById('txtcomment').value = '';
-  })
-  .catch(() => {
+  btnEditComment.addEventListener('click', () => {
+    const editFirebase = firebase.firestore().collection('comentarios').doc(event.target.dataset.id);
+    const postEdit = document.querySelector('#txtcomment').value;
+    return editFirebase.update({
+      comment: postEdit,
+    })
+      .then(() => {
+        document.getElementById('txtcomment').value = '';
+      })
+      .catch(() => {
+      });
   });
-  }
-  )};
+};
 
 
 // cerrar Sesion.

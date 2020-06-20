@@ -30,7 +30,7 @@ export const profile = () => {
     </section>
     <section class="posts">
         <div class="posts-container">
-            <h2>Escribe tu post</h2>
+            <h2 id="h2">Escribe tu post</h2>
             <div>
                 <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
                 <input type="button" class="btn" id="btn-comment" value="Postear">

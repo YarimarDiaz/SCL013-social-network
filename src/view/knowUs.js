@@ -13,7 +13,7 @@ export const knowUs = () => {
         </div>
         <div id="mision"  class="caja-conocenos">
           <img src="img/En-que-consiste-el-trueque-2.png">
-          <h1>Misión</h1>
+          <h1 id="h1">Misión</h1>
           <p>Consiste en intercambiar sin el uso de dinero, productos y servicios basado en la satisfacción 
             de necesidadesque en la busqueda del lucro personal.</p>
         </div>
