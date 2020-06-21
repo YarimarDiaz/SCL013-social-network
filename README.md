@@ -120,6 +120,47 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 #### 6.1 Testeos de Usabilidad
 
 Logramos hacer entrevistas a un total de 13 personas que vieron nuestro prototipo de alta fidelidad y nos comentaron sus apreciaciones. Para ello creamos una cantidad de preguntas que fueron aplicadas a cada uno de los entrevistados.
+
 Los resultados de este testeo son los siguientes:
 
-![Reportemazemission1](/src/img/maze_report-mission-1)
+* **Lograr Logearse o Registrarse.**
+
+![Reportemazemission1](/src/img/readme/Reportemazzemission1.png)
+
+Donde el 100% de los usuarios lograron completar la misión de manera directa.
+
+* **Hacer una publicación y dar mer gusta o like**
+
+![Reportemazemission2](/src/img/readme/Reportemazzemission2.png)
+
+Donde un 23.1% de los usuarios lo completó de manera directa y un 69.2% lo logró por caminos alternativos y un 7.7% abandonó la misión.
+
+* **Lograr eliminar comentario o eliminar publicacion**
+
+![Reportemazemission3](/src/img/readme/Reportemazzemission3.png)
+
+Donde un 69.21% de los usuarios lo completó de manera directa y un 30.8% lo logró por caminos alternativos y un 0% abandonó la misión.
+
+* **Encuentra informacion sobre nuestra app**
+
+![Reportemazemission4](/src/img/readme/Reportemazzemission4.png)
+
+Donde un 61.5% de los usuarios lo completó de manera directa y un 30.8% lo logró por caminos alternativos y un 7.7% abandonó la misión.
+
+* **Cerrar Sesión**
+
+![Reportemazemission5](/src/img/readme/Reportemazzemission5.png)
+
+Donde un 61.5% de los usuarios lo completó de manera directa y un 38.5% lo logró por caminos alternativos y un 0% abandonó la misión.
+
+* **¿Como te sentiste usando la app?**
+
+Se le pidió al usuario seleccionar como se sintió al realizar las misiones anteriores, donde la escala se midio usando emojis de expresión.
+
+![Reportemazemission6](/src/img/readme/Reportemazzemission6.png)
+
+Logrando concluir que  del 92% consideró que se sintieron "satisfechos y muy satisfechos" usando la app, y otro 8% se sintió "poco satisfecho".
+
+
+
+
