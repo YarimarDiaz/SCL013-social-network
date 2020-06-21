@@ -97,11 +97,22 @@ export const accesoUserLogin = (email, pass) => {
 export const createComment = () => {
   // Funcion para guardar los comentarios
   const comment = document.getElementById('txtcomment').value;
-  const user = dataUser();
+  const user = firebase.auth().currentUser;
   // console.log('llama la funcion');
+  let userName = user.displayName;
+  if (user.displayName == null) {
+    userName = user.email;
+  }
+
+  let userPhoto = user.photoURL;
+  if (user.photoURL == null) {
+    userPhoto = './img/nofoto.jpeg';
+  }
   // Agregar comentarios
   firebase.firestore().collection('comentarios').add({
-    usuario: user.displayName,
+    nombre: userName,
+    user: user.uid,
+    photouser: userPhoto,
     comment: comment,
     fecha: new Date(),
     likes: 0,
@@ -125,25 +136,34 @@ export const postComments = (divProfile) => {
       querySnapshot.forEach((doc) => {
         const span = document.createElement('span');
         span.innerHTML = `
-          <p>${doc.data().comment}</p>
+        <div class="encabezadoPost">
+        <div class="fotoSpan">
+        <img class='perfilFoto' src="${doc.data().photouser}">
+        </div>
+        <div class="nombreSpan">
+        <p id='nombreUsuario'>${doc.data().nombre}</p>
+        <p id='fechaPublicado'>${new Date().toLocaleString()}</p>
+        </div>
+        </div>
+          <p class="cuadroEscribir">${doc.data().comment}</p>
+        <div class="botones">
           <button id="btnsum"><img id="btnLike" src="./img/like.png"><span id="icon_${doc.id}">${doc.data().likes}</span></button>
-          <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button>
-          <button id="btnEditarPost" data-id="${doc.id}" data-comment="${doc.data().comment}">Editar</button>
+          <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button></td>
+          <button name="btnEditar">editar</button></td>
+          <button id="btnEditComment">Postear Edición</button>
+        </div>
             `;
 
         const btnlike = span.querySelector('#btnsum');
         btnlike.addEventListener('click', () => {
           sumLike(doc.id, doc.data().likes);
         });
-
         const btnDelete = span.querySelector('#btnDeletePost');
         btnDelete.addEventListener('click', () => {
-          const confirmar = confirm('¿Desea eliminar el Post?');
-          if (confirmar === true);
           deleteData(doc.id);
         });
 
-        const btnEdit = span.querySelector('#btnEditarPost');
+        const btnEdit = span.querySelector('#btnEditComment');
         btnEdit.addEventListener('click', () => {
           const confirmarEdi = confirm('¿Desea editar el Post?');
           if (confirmarEdi === true);
@@ -153,7 +173,6 @@ export const postComments = (divProfile) => {
       });
     });
 };
-
 export const sumLike = (idComment, likes) => {
   firebase.firestore().collection('comentarios').doc(idComment).update({
     likes: likes + 1,
@@ -189,7 +208,6 @@ export const editComment = (event) => {
       });
   });
 };
-
 
 // cerrar Sesion.
 export const signOut = () => {

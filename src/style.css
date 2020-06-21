@@ -2,27 +2,42 @@ html, body {
     height: 100%;
     width: 100%;
 }
-html {
-    display: table;
-    margin: auto;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgb(233, 233, 233);
 }
-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-#home {
+
+#root {
     display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
-#home .img-portada{
+
+#root div {
+    width: 100%;
+}
+
+#home, #pageSingIn {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: center;
+}
+#home .img-portada, #pageSingIn .img-portada{
   background-image: url("../img/Trueque-CriptoTendencia.jpg");
     background-repeat: no-repeat;
     width: 700px;
     height: 400px;
 }
-#boxsingIn{
+
+#root div #boxsingIn {
+    width: auto;
+}
+
+#boxsingIn, #formSingIn{
     border-radius: 10px;
     width: 280px;
     height: 450px;
@@ -34,7 +49,11 @@ body {
     background-color: #f6f6f6;
     align-items: center;
     font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+
 .logo {
     width: 220px;
     height: 70px;
@@ -42,22 +61,19 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .login {
     width: 220px;
     height: 30px;
     margin-top:10px;
     font-size: 17px;
 }
+
 button.login {
     background-color: #82D7F6;
     border: 1px solid #0377FB;
     color: white;
     font-weight: bold;
-}
-article.login {
-    border-bottom: 1px solid #707070;
-    margin-top: -3px;
-    margin-bottom: 15px;
 }
 
 #btnGoogle {
@@ -84,120 +100,122 @@ font-weight: bold;
 font-size: 17px;
 }
 
-/*PROFILE */
+/*  PROFILE   */
 #section-father{
     display: flex;
-    flex-direction: column;
-background-color: indigo;
-}
-#section-father .profile{
-    display: flex;
-justify-content: center;    
-background-color:#f3f5f3;
-    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
-    border: 1px solid;
-    
-}
-
-
-#section-father .profile-image-container{
-    
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-    
-}
-#section-father .profile-image-container .profilePhoto{
-    
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid;
-}
-#section-father .profile-image-container h1{
-    font-size: 2.5rem;
-    color: #333;
-    margin: 1.5rem 6;
-}
-#section-father .city{
-    color:#777;
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-#section-father .description{
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    text-align: center;
-    color: #333;
-}
-#section-father .btn{
-    padding: 1rem 2.5rem;
-    background-color: #ffad33;
-    
-    margin: 1px solid;
-    text-transform: uppercase;
-    color: #eee;
-    font-size: 1.4rem;
-    transition: all .5s;
-}
-#section-father .btn:hover{
-    transform: translateY(-2px);
-    box-shadow: .5rem .5rem 2rem rgba(0,0,0, .2);
-}
-#section-father .btn:active{
-    transform: translateY(0);
-    box-shadow: none;
-}
-#section-father .posts{
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-   
-}
-#section-father .posts-container{
-    padding: 15px 10px;
-    width: 600px;
-    
-    background-color: lightblue;
-    border: 2px solid #333;
-}
-#section-father .posts-container, #h2{
-    text-align: center;
-}
-#section-father textarea{
-    height: 40px;
     width: 100%;
-    border: none;
-    border-bottom: 2px solid #aaa; 
-    margin-bottom: 10px;
-    resize: none;
-    outline: none;
-} 
-#section-father .commentsContainer{
-    background-color: green;
-    border-style: solid;
-   margin: 60px;
-    width: 700px;
 }
-.commentsContainer h2{
-    font-size: 36px;
-    color: #283035;
-    font-weight: 400;
+
+#section-father .posts form {
+    margin: 18px 0px 23px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#section-father .posts form button {
+    width: 85px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #0377FB;
+    border: 1px solid #82D7F6;
+    color: white;
+    font-weight: bold;
+}
+
+.posts {
+    width: 600px;
+}
+
+#post span {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid silver;
+    padding: 5px 2px 2px 5px
+}
+
+#root div .fotoSpan, #root div .nombreSpan{
+    width: auto;
+}
+
+#root div .nombreSpan{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#root div .nombreSpan p{
+    margin: 0px;
+    padding: 0px;
+}
+
+#root div .nombreSpan p:first{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h2 {
+    color:#1D1E20;
+    font-weight: bold;
 }
 
 #btnLike, #btnDelete {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
+#btnsum, #btnDeletePost{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background-color: white;
+}
+
+#btnsum span{
+margin: 0;
+border: none;
+}
+
+.perfilFoto {
+    width: 50px;
+    border-radius: 30px;
+}
+ 
+.encabezadoPost{
+    display: flex;
+}
+
+#nombreUsuario{
+    font-size: 17px;
+    margin-right: 6px;
+}
+
+.cuadroEscribir{
+    background-color: white;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 1px silver;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.botones {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 5px 0;
+}
+
+.botones button {
+    margin-left: 5px;
+}
 
 
 .divBaner{
@@ -205,17 +223,55 @@ background-color:#f3f5f3;
     background: #1D1E20;
     justify-content: space-between;
 }
-    .baner{
+
+.baner{
     width: 200px;
     height: 80px;
-    }
+    margin-left: 10px;
+}
 
-    #btn-SingOut{
-        align-items: end;
-        margin-top: 70px;
-    
-    }
+.profilePhoto {
+    height: 70px;
+    border-radius: 50px;
+    align-items: end;
+}
 
+.nameBaner {
+    font-weight: bold;
+    color: #8d8d8d;
+    margin-right: 10px;
+}
+
+#root .nombreFoto, .return {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.nameClouse {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.cuadroTextarea {
+    width: 580px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 1px silver;
+    height: 60px;
+    border: 1px solid #707070;
+    padding: 8px 1px 1px 8px;
+}
+
+.cuadroTextarea:focus {
+    outline:none;
+}
+
+.return {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 
 /*---------CONOCENOS----------*/
 #conocenos {
@@ -224,6 +280,7 @@ background-color:#f3f5f3;
     justify-content: space-around;
     flex-direction: column;
 }
+
 .caja-conocenos {
     margin: 20px 20px 20px 20px;
 }
@@ -240,11 +297,18 @@ background-color:#f3f5f3;
    font-size: 18px;
 }
 
-.caja-conocenos, #h1 {
+.caja-conocenos h1 {
     font-family: 'Luckiest Guy', cursive;
     color: black
  }
 
+.selloTrueke {
+    width: 50px;
+    height: 40px;
+    float: right;
+    margin-right: 10px;
+
+}
 
  @media only screen and (max-width: 380px) {
     .caja-conocenos {
@@ -260,33 +324,6 @@ background-color:#f3f5f3;
 
 /* Sing In*/
 
-#pageSingIn {
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#formSingIn{
-    border-radius: 10px;
-    width: 280px;
-    height: 450px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 10px;
-    border: 1px solid #707070;
-    background-color: #f6f6f6;
-    align-items: center;
-    font-size: 17px;
-}
-#formSingIn img {
-    width: 220px;
-    height: 70px;
-    float: left;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 .inputSingIn {
     width: 220px;
     height: 30px;
@@ -300,24 +337,15 @@ button.inputSingIn {
     font-weight: bold;
 }
 
-#pageSingIn .img-portada{
-    background-image: url("../img/Trueque-CriptoTendencia.jpg");
-      background-repeat: no-repeat;
-      width: 700px;
-      height: 400px;
-  }
-
 /*---------Mensajes de Error----------*/
 #mensajes{
     text-align: center;
-    color:purple;
+    color:#bd168c;
     font-weight: bold;
-
 }
   
 #mensageSing{
     text-align: center;
-    color:purple;
+    color:#bd168c;
     font-weight: bold;
-
 }
