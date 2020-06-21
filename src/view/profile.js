@@ -5,38 +5,34 @@ import {
 export const profile = () => {
   const divProfile = document.createElement('div');
   const user = dataUser();
+  let userName = user.displayName;
+  if (user.displayName == null) {
+    userName = user.email;
+  }
+  let userPhoto = user.photoURL;
+  if (user.photoURL == null) {
+    userPhoto = './img/nofoto.jpeg';
+  }
+
   const viewProfile = `
   <div class="divBaner">
-    <div>
-      <img src="./img/logo3.png" class="baner">
-    </div>
-    <div>
+  <a href="#/knowUs"><img class="baner" src="./img/logo3.png"></a>
+    <div class="nombreFoto">
+      <img class="profilePhoto" src="${userPhoto}" >
+    <div class="nameClouse">
+      <p class="nameBaner">${userName}</p>
       <button id="btn-SingOut">Cerrar Sesión</button>
+    </div>
     </div>
   </div>
     <section id="section-father">
-    <section class="profile">
-        <div class="container">
-            <div class="profile-wrapper">
-                <div class="profile-image-container">
-                <img src="${user.photoURL}" class="profilePhoto">
-                <p> Bienvenida ${user.displayName}</p>
-                    <p class="city">Santiago</p>
-                    <p class="description">Descripcion perfil</p>
-
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="posts">
         <div class="posts-container">
-            <h2 id="h2">Escribe tu post</h2>
-            <div>
-                <textarea placeholder="Escribe aquí tu comentario" id="txtcomment" ></textarea>
-                <input type="button" class="btn" id="btn-comment" value="Postear">
-            </div>
-              
-              <button id="btnEditComment">Postear Edición</button>
+            <form>
+                <textarea class="cuadroTextarea" placeholder="Yo busco! Yo ofrezco!" id="txtcomment" ></textarea>
+                <button class="btn" id="btn-comment" >Postear</button>
+            </form>
+            <h2>Publicaciones Recientes</h2>
               <div id="post"></div>
         </div>
     </section>

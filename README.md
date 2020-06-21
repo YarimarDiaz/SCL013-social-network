@@ -112,3 +112,14 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 ### 5.Visita nuestra página aquí
 
 [El Trueke](https://firebase.google.com/)
+
+
+### 6. Metodologia UX
+
+***
+#### 6.1 Testeos de Usabilidad
+
+Logramos hacer entrevistas a un total de 13 personas que vieron nuestro prototipo de alta fidelidad y nos comentaron sus apreciaciones. Para ello creamos una cantidad de preguntas que fueron aplicadas a cada uno de los entrevistados.
+Los resultados de este testeo son los siguientes:
+
+![Reportemazemission1](/src/img/maze_report-mission-1)

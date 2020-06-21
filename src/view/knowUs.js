@@ -7,8 +7,8 @@ export const knowUs = () => {
           <div>
             <img src="./img/logo3.png" class="baner">
           </div>
-          <div>
-            <button id="btn-SingOut">Cerrar Sesión</button>
+          <div class="return">
+          <a href="./#/profile"><button id="return">Volver</button></a> 
           </div>
         </div>
         <div id="mision"  class="caja-conocenos">
@@ -30,8 +30,8 @@ export const knowUs = () => {
           <p>Fomentar la solidaridad, el apoyo entre la comunidad, la ayuda entre personas y pensar en los más 
             necesitados, creando una sociedad más empática y colaborativa</p>
         </div>
-
       </div>
+      <img class="selloTrueke" src="./img/trueque.jpg" >
     </div>
 `;
   divknowUs.innerHTML = viewknowUs;
