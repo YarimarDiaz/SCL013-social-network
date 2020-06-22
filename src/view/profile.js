@@ -31,6 +31,7 @@ export const profile = () => {
             <form>
                 <textarea class="cuadroTextarea" placeholder="Yo busco! Yo ofrezco!" id="txtcomment" ></textarea>
                 <button class="btn" id="btn-comment" >Postear</button>
+                <button id="btnEditComment">Postear Edición</button>
             </form>
             <h2>Publicaciones Recientes</h2>
               <div id="post"></div>
