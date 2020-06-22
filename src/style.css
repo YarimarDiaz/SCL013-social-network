@@ -337,6 +337,11 @@ button.inputSingIn {
     font-weight: bold;
 }
 
+.cancel {
+    color: red;
+    margin-top: 10px;
+}
+
 /*---------Mensajes de Error----------*/
 #mensajes{
     text-align: center;

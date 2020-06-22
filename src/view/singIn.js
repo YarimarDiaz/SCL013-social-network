@@ -13,6 +13,8 @@ export const singIn = () => {
           <input type="email" id="emailSingIn" class="inputSingIn"   placeholder="Direccion de correo">
           <input type="password" id="passwordSingIn" class="inputSingIn" placeholder="Contraseña">
           <button class="inputSingIn" id="btnSingIn">Registrarme</Button>
+          <a href='#/' class="cancel">Cancelar</a> 
+
           <h3 id="mensageSing"></h3>
       </form>
   </div>

@@ -149,8 +149,7 @@ export const postComments = (divProfile) => {
         <div class="botones">
           <button id="btnsum"><img id="btnLike" src="./img/like.png"><span id="icon_${doc.id}">${doc.data().likes}</span></button>
           <button id="btnDeletePost" data-id="${doc.id}"><img id="btnDelete" src="./img/delete.png"></button></td>
-          <button name="btnEditar">editar</button></td>
-          <button id="btnEditComment">Postear Edición</button>
+          <button id="btnEditar" data-id="${doc.id}" data-comment="${doc.data().comment}">editar</button></td>
         </div>
             `;
 
@@ -160,14 +159,18 @@ export const postComments = (divProfile) => {
         });
         const btnDelete = span.querySelector('#btnDeletePost');
         btnDelete.addEventListener('click', () => {
-          deleteData(doc.id);
+          const confirmar = confirm('¿Desea eliminar el Post?');
+          if (confirmar === true) {
+            deleteData(doc.id);
+          }
         });
 
-        const btnEdit = span.querySelector('#btnEditComment');
-        btnEdit.addEventListener('click', () => {
+        const btnEdit = span.querySelector('#btnEditar');
+        btnEdit.addEventListener('click', (event) => {
           const confirmarEdi = confirm('¿Desea editar el Post?');
-          if (confirmarEdi === true);
-          editComment(event);
+          if (confirmarEdi === true) {
+            editComment(event);
+          }
         });
         publicar.appendChild(span);
       });
