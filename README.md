@@ -111,7 +111,7 @@ cuando le hago click al botón de eliminar, entonces mi publicación se elimina 
 
 ### 5.Visita nuestra página aquí
 
-[El Trueke](https://firebase.google.com/)
+[El Trueke](https://constanza-oreste.github.io/SCL013-social-network/src/index.html)
 
 
 ### 6. Metodologia UX
