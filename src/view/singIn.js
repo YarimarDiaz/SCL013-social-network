@@ -5,9 +5,11 @@ export const singIn = () => {
   const viewSingIn = `
   <div id="content">
   <div id="pageSingIn">
-      <div class="img-portada"></div>
+      <div class="img-portada">
+          <img src="./img/Trueque-CriptoTendencia.jpg" alt="">
+      </div>
       <form id="formSingIn"> 
-          <img class="logo" src="../img/logo3.png">
+          <img class="logo" src="./img/logo3.png">
           <input type="text" id="name" class="inputSingIn" placeholder="Nombre">
           <input type="text" id="lastname" class="inputSingIn"   placeholder="Apellido">
           <input type="email" id="emailSingIn" class="inputSingIn"   placeholder="Direccion de correo">
