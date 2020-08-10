@@ -6,7 +6,9 @@ export const home = () => {
   const viewHome = `
    <div id="content">
     <div id="home">
-      <div class="img-portada"></div>
+      <div class="img-portada">
+         <img src="./img/Trueque-CriptoTendencia.jpg" alt="">
+      </div>
         <div id="boxsingIn">
         <img class="logo" src="./img/logo3.png">
           <input class="login" id="txtEmail" type="email" name="user-email" placeholder="Direccion de correo">
