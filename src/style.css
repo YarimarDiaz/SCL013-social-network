@@ -27,7 +27,7 @@ html, body, #root {
     justify-content: center;
 }
 #home .img-portada, #pageSingIn .img-portada{
-  background-image: url("../img/Trueque-CriptoTendencia.jpg");
+  background-image: url("./img/Trueque-CriptoTendencia.jpg");
     background-repeat: no-repeat;
     width: 700px;
     height: 400px;
